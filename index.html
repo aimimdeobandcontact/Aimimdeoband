@@ -1,113 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volunteer Connect | AIMIM Deoband</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>All India Majlis-e-Ittehadul Muslimeen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --main-green: #0b6623; --light-green: #16a34a; }
-        body { margin: 0; font-family: 'Segoe UI', Arial, sans-serif; background: #f4f7f6; color: #333; }
-        .container { width: 92%; max-width: 1200px; margin: auto; }
-        .hero { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1540910419892-f0c74b0e8966?auto=format&fit=crop&q=80') center/cover; color: white; padding: 50px 20px; text-align: center; border-bottom: 5px solid var(--light-green); }
-        .section { padding: 40px 20px; background: white; margin-bottom: 10px; border-radius: 10px; }
-        h2 { text-align: center; color: var(--main-green); margin-bottom: 25px; }
-        .leadership-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; text-align: center; margin-bottom: 30px; }
-        .leader-card { padding: 15px; border-radius: 10px; background: #fff; border: 1px solid #ddd; border-bottom: 4px solid var(--main-green); }
-        .leader-card h3 { font-size: 1rem; margin: 5px 0; }
-        .leader-card p { font-size: 0.8rem; color: var(--light-green); font-weight: bold; margin: 0; }
-        .form-container { max-width: 500px; margin: auto; background: white; padding: 25px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); border-top: 5px solid var(--main-green); }
-        .form-group { margin-bottom: 15px; }
-        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
-        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box; }
-        .whatsapp-btn { width: 100%; padding: 15px; background: #25d366; color: white; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; transition: 0.3s; }
-        .sticky { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 1000; }
-        .sticky a { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 22px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); text-decoration: none; }
-        footer { background: #111; color: white; padding: 30px; text-align: center; }
+        .mim-green { background-color: #008248; }
+        .hero-gradient { background: linear-gradient(180deg, #008248 0%, #005a32 100%); }
+        .kite-logo { width: 100px; height: 100px; filter: drop-shadow(0 0 15px rgba(255,255,255,0.7)); }
+        .floating-wa { position: fixed; bottom: 20px; right: 20px; z-index: 1000; animation: bounce 2s infinite; }
+        @keyframes bounce { 0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 40% {transform: translateY(-10px);} 60% {transform: translateY(-5px);} }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 font-sans">
 
-<div class="sticky">
-    <a href="https://wa.me/919888183650" style="background: #25d366;"><i class="fab fa-whatsapp"></i></a>
-    <a href="tel:9888183650" style="background: #0b6623;"><i class="fas fa-phone"></i></a>
-</div>
+    <a href="https://wa.me/919888183650" class="floating-wa bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl text-3xl">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-<header class="hero">
-    <div class="container">
-        <h1>MAJLIS-E-ITTEHAD-UL-MUSLIMEEN</h1>
-        <p>Deoband Unit: Join the Movement</p>
-    </div>
-</header>
+    <header class="hero-gradient text-white py-14 px-4 text-center shadow-2xl relative">
+        <div class="flex justify-center mb-6">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/All_India_Majlis-e-Ittehadul_Muslimeen_logo.png/600px-All_India_Majlis-e-Ittehadul_Muslimeen_logo.png" alt="AIMIM Logo" class="kite-logo">
+        </div>
+        <h1 class="text-2xl md:text-5xl font-black uppercase tracking-tighter">All India Majlis-e-Ittehadul Muslimeen</h1>
+        <p class="text-xl mt-3 opacity-90 font-medium italic">Haq aur Insaaf ki Awaaz</p>
+    </header>
 
-<section class="section">
-    <div class="container">
-        <h2>Leadership (Bade Quaid)</h2>
-        <div class="leadership-grid">
-            <div class="leader-card"><h3>Asaduddin Owaisi</h3><p>National President</p></div>
-            <div class="leader-card"><h3>Shaukat Ali</h3><p>UP State President</p></div>
-            <div class="leader-card"><h3>Imtiaz Jaleel</h3><p>Maharashtra President</p></div>
-            <div class="leader-card"><h3>Akhtarul Iman</h3><p>Bihar State President</p></div>
+    <main class="max-w-4xl mx-auto p-4 -mt-10 space-y-8">
+        
+        <div class="grid grid-cols-5 gap-2 bg-white p-6 rounded-3xl shadow-xl border border-gray-100">
+            <a href="https://facebook.com/faizaliaimim" target="_blank" class="flex flex-col items-center"><i class="fab fa-facebook text-blue-600 text-2xl"></i><span class="text-[9px] mt-1 font-bold">FB</span></a>
+            <a href="https://instagram.com/faizaliaimim" target="_blank" class="flex flex-col items-center"><i class="fab fa-instagram text-pink-600 text-2xl"></i><span class="text-[9px] mt-1 font-bold">Insta</span></a>
+            <a href="https://youtube.com/faizaliaimim" target="_blank" class="flex flex-col items-center"><i class="fab fa-youtube text-red-600 text-2xl"></i><span class="text-[9px] mt-1 font-bold">YouTube</span></a>
+            <a href="https://wa.me/919888183650" class="flex flex-col items-center"><i class="fab fa-whatsapp text-green-500 text-2xl"></i><span class="text-[9px] mt-1 font-bold">WhatsApp</span></a>
+            <a href="mailto:aimimdeobandcontact@gmail.com" class="flex flex-col items-center"><i class="fas fa-envelope text-gray-700 text-2xl"></i><span class="text-[9px] mt-1 font-bold">Email</span></a>
         </div>
 
-        <div class="form-container">
-            <h3 style="text-align: center; color: var(--main-green);">Volunteer Registration</h3>
-            <p style="text-align: center; font-size: 0.9rem;">Karyakarta <strong>Faiz Ali</strong> se judne ke liye form bharein</p>
-            <form id="volunteerForm">
-                <div class="form-group">
-                    <label>Aapka Naam</label>
-                    <input type="text" id="name" placeholder="Naam likhein" required>
-                </div>
-                <div class="form-group">
-                    <label>Area / Mohalla</label>
-                    <input type="text" id="area" placeholder="Deoband ke kis ilaqe se hain?" required>
-                </div>
-                <div class="form-group">
-                    <label>Peshah (Profession)</label>
-                    <select id="profession">
-                        <option value="Student">Student</option>
-                        <option value="Business">Business</option>
-                        <option value="Social Work">Social Work</option>
-                        <option value="Farmer">Kisan (Farmer)</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Khas Message</label>
-                    <textarea id="message" rows="3" placeholder="Faiz bhai ke liye koi sandesh?"></textarea>
-                </div>
-                <button type="button" class="whatsapp-btn" onclick="sendToWhatsApp()">
-                    <i class="fab fa-whatsapp"></i> SEND ON WHATSAPP
+        <section class="bg-white rounded-3xl p-8 shadow-2xl border-t-8 border-green-700">
+            <div class="text-center mb-8">
+                <h3 class="text-2xl font-black text-gray-900 uppercase">Membership Form</h3>
+                <p class="text-sm text-gray-500">All India Majlis-e-Ittehadul Muslimeen Se Judein</p>
+            </div>
+            
+            <form class="space-y-5">
+                <input type="text" id="name" placeholder="Pura Naam (Full Name)" class="w-full p-4 bg-gray-50 border rounded-2xl outline-none focus:ring-2 focus:ring-green-600">
+                <input type="text" id="location" placeholder="State aur District" class="w-full p-4 bg-gray-50 border rounded-2xl outline-none focus:ring-2 focus:ring-green-600">
+                <button type="button" onclick="joinMIM()" class="w-full mim-green text-white font-black py-5 rounded-2xl text-lg shadow-lg flex items-center justify-center space-x-3 hover:scale-105 transition duration-300">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                    <span>JOIN AIMIM NOW</span>
                 </button>
             </form>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-900 text-white py-12 px-6 text-center mt-12">
+        <p class="text-sm font-bold tracking-widest mb-4">ALL INDIA MAJLIS-E-ITTEHADUL MUSLIMEEN</p>
+        <p class="text-xs opacity-50 mb-6 font-semibold underline">Contact: 9888183650</p>
+        <div class="flex justify-center space-x-6 text-xl opacity-60">
+            <a href="https://facebook.com/faizaliaimim"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com/faizaliaimim"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com/faizaliaimim"><i class="fab fa-youtube"></i></a>
         </div>
-    </div>
-</section>
+    </footer>
 
-<footer>
-    <div class="container">
-        <p><strong>Faiz Ali (Karyakarta) - Deoband</strong></p>
-        <p>9888183650 | Banhara Khas, Saharanpur</p>
-    </div>
-</footer>
-
-<script>
-    function sendToWhatsApp() {
-        const name = document.getElementById('name').value;
-        const area = document.getElementById('area').value;
-        const profession = document.getElementById('profession').value;
-        const message = document.getElementById('message').value;
-
-        if(name == "" || area == "") {
-            alert("Kripya Naam aur Area bharein!");
-            return;
+    <script>
+        function joinMIM() {
+            const name = document.getElementById('name').value;
+            const loc = document.getElementById('location').value;
+            const msg = `*NEW MEMBER REGISTRATION*%0A%0A*Name:* ${name}%0A*Location:* ${loc}%0A%0A_I want to join AIMIM officially._`;
+            window.location.href = `https://wa.me/919888183650?text=${msg}`;
         }
-
-        const whatsappNumber = "919888183650";
-        const text = `*New Volunteer Registration*%0A%0A*Name:* ${name}%0A*Area:* ${area}%0A*Profession:* ${profession}%0A*Message:* ${message}`;
-        const url = `https://wa.me/${whatsappNumber}?text=${text}`;
-        window.open(url, '_blank').focus();
-    }
-</script>
-
+    </script>
 </body>
 </html>
